@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>계산기 여러 실습 버젼</title>
+<script src="jscalcu.js"></script>
+</head>
+<body>
+<h1> 정수호의 계산기 통합버젼 </h1>
+<h2> Javascript 버젼 </h2>
+
+<input type="text" id="n1" size=10 value=3 / >
+<select id="op"> 
+	<option> + </option>
+	<option> - </option>
+	<option selected> * </option>
+	<option> / </option>
+</select>
+<input type="text" id="n2" size=10 value=7.7 / >
+<input type="button" value="실행" onClick="calcjs()">
+<input type="text" id="ans" size=20 / >
+
+
+<hr>
+<h2> JSP 버젼 </h2>
+<form method="post" action="jspcalcu.jsp">
+
+<input type="text" name="n1" size=10 value=3 / >
+<select name="op"> 
+	<option> + </option>
+	<option> - </option>
+	<option selected> * </option>
+	<option> / </option>
+</select>
+<input type="text" name="n2" size=10 value=7 / >
+<input type="submit" value="서브릿호출">
+</form>
+
+<hr>
+<h2>Servlet 버젼</h2>
+
+<h2 action="/JavaServer2024/calcuServlet"></h2>
+<hr>
+<form method="get" action="/JavaServer2024/calcuServlet">
+	<input type="text" name="n1" value="117" size="10" />
+	<select name="op" >
+		<option>+</option>
+		<option>-</option>
+		<option selected>*</option>
+		<option>/</option>
+	</select>
+	<input type="text" name="n2" value="119"  size="10" >
+	<input type="submit" value="실행" />
+</form>
+</body>
+</html>
